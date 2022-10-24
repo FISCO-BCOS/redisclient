@@ -7,7 +7,7 @@
 
 # Find Boost, users of the library only need system (for error_code), our
 # examples use the other components
-set(boost_components system)
+set(boost_components system program_options)
 if (NOT RedisClientInstall)
   set(boost_components ${boost_components}
                        program_options
