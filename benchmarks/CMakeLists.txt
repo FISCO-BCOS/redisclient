@@ -1,6 +1,7 @@
 set(BENCHMARKS
     redis-parser-benchmark.cpp
 )
+find_package(Boost CONFIG REQUIRED program_options)
 
 foreach(BENCHMARK ${BENCHMARKS})
   get_filename_component(EXECUTABLE ${BENCHMARK} NAME_WE)

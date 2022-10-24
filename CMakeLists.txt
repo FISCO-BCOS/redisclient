@@ -5,8 +5,8 @@ cmake_minimum_required(VERSION 3.2)
 
 include("cmake/HunterGate.cmake")
 HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.23.101.tar.gz"
-    SHA1 "ccb234f5ea9dc89989b28164cb38cb4ebb04237c"
+    URL "https://github.com/FISCO-BCOS/hunter/archive/162ff7cde3d843e43afdab8fe3214275c35ef168.tar.gz"
+    SHA1 "0ba8099fe89beb0d44986c750fe0d44040725d99"
 )
 
 # Project and Versioning
@@ -45,8 +45,8 @@ if (ADDRESS_SANITIZER)
 endif()
 
 if(HUNTER_ENABLED)
-  hunter_add_package(Boost COMPONENTS system)
-  find_package(Boost CONFIG REQUIRED system)
+  hunter_add_package(Boost COMPONENTS all)
+  find_package(Boost CONFIG REQUIRED system program_options)
 else()
 
 if (MSVC)

@@ -21,10 +21,10 @@ endforeach()
 
 target_link_libraries(benchmark
     RedisClient
-    ${Boost_PROGRAM_OPTIONS_LIBRARY}
+    Boost::program_options
 )
 
 target_link_libraries(sync_benchmark
     RedisClient
-    ${Boost_PROGRAM_OPTIONS_LIBRARY}
+    Boost::program_options
 )
